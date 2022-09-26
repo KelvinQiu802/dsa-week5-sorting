@@ -17,7 +17,7 @@ public class QuickSort {
   }
 
   public static int partition(int[] arr, int begin, int end) {
-    int pivot = arr[end - 1]; // choose last value as the pivot
+    int pivot = arr[end]; // choose last value as the pivot
     int i = begin - 1;
     for (int j = begin; j < end; j++) {
       if (arr[j] < pivot) {
