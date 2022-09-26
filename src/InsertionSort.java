@@ -9,11 +9,15 @@ public class InsertionSort {
 
   public static void insertionSort(int[] arr) {
     for (int i = 1; i < arr.length; i++) {
-      for (int j = i; j > 0; j--) {
-        if (arr[j] < arr[j - 1]) {
-          swap(arr, j, j - 1);
-        }
+      int value = arr[i];
+      int j = i - 1;
+      while (j >= 0 && arr[j] > value) {
+        // Move elements that are greater than current value, to one position ahead of
+        // their current position
+        swap(arr, j, j + 1);
+        j--;
       }
+      arr[j + 1] = value;
     }
   }
 
