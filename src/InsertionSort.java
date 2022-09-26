@@ -14,16 +14,10 @@ public class InsertionSort {
       while (j >= 0 && arr[j] > value) {
         // Move elements that are greater than current value, to one position ahead of
         // their current position
-        swap(arr, j, j + 1);
+        arr[j + 1] = arr[j];
         j--;
       }
       arr[j + 1] = value;
     }
-  }
-
-  public static void swap(int[] arr, int a, int b) {
-    int temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
   }
 }
