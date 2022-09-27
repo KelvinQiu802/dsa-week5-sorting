@@ -2,4 +2,5 @@
 
 - [x] Selection Sort
 - [x] Insertion Sort
+- [x] Shell Sort
 - [x] Quick Sort
