@@ -14,7 +14,7 @@ public class ShellSort {
       gap = 3 * gap + 1;
     }
 
-    for (gap = arr.length / 3; gap > 0; gap /= 3) {
+    while (gap > 0) {
       // For each gap, do the insersion sort
       for (int i = gap; i < arr.length; i++) {
         int value = arr[i];
@@ -25,6 +25,7 @@ public class ShellSort {
         }
         arr[j + gap] = value;
       }
+      gap /= 3;
     }
   }
 }
